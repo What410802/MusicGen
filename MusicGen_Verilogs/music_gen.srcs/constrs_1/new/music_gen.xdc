@@ -1,0 +1,40 @@
+#set_property BITSTREAM.General.UnconstrainedPins {Allow} [current_design]
+#set_property SEVERITY {Warning} [get_drc_checks UCIO-1]
+
+set_property PACKAGE_PIN U18 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+set_property PACKAGE_PIN G15 [get_ports beep]
+set_property IOSTANDARD LVCMOS33 [get_ports beep]
+set_property PACKAGE_PIN K14 [get_ports reset_n]
+set_property IOSTANDARD LVCMOS33 [get_ports reset_n]
+
+
+
+set_property PACKAGE_PIN J19 [get_ports back15s]
+set_property PACKAGE_PIN H16 [get_ports forw15s]
+set_property IOSTANDARD LVCMOS33 [get_ports back15s]
+set_property IOSTANDARD LVCMOS33 [get_ports forw15s]
+
+
+set_property PACKAGE_PIN L15 [get_ports {list_index_n[0]}]
+set_property PACKAGE_PIN G14 [get_ports {list_index_n[1]}]
+set_property PACKAGE_PIN J14 [get_ports {list_index_n[2]}]
+set_property PACKAGE_PIN F16 [get_ports {list_index_n[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[3]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[4]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[5]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[6]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {list_index_n[7]}]
+#set_property PACKAGE_PIN H15 [get_ports {list_index_n[4]}]
+#set_property PACKAGE_PIN D18 [get_ports {list_index_n[5]}]
+#set_property PACKAGE_PIN E17 [get_ports {list_index_n[6]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports ds]
+set_property IOSTANDARD LVCMOS33 [get_ports shcp]
+set_property IOSTANDARD LVCMOS33 [get_ports stcp]
+set_property PACKAGE_PIN D20 [get_ports ds]
+set_property PACKAGE_PIN E19 [get_ports shcp]
+set_property PACKAGE_PIN F17 [get_ports stcp]
