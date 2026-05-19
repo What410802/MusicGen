@@ -1,0 +1,8 @@
+music_gen.cache/
+music_gen.hw/
+music_gen.ioplanning/
+music_gen.ip_user_files/
+music_gen.runs/
+music_gen.sim/
+*.jou
+*.log
