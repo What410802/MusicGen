@@ -17,8 +17,8 @@
 
 module music_gen(
         input clk, input reset_n, output wire beep, // clk: 50MHz
-        input [3:0] list_index_n,
-        input back15s, input forw15s,
+        input [3:0] list_index_i,
+        input back15s_n, input forw15s_n,
         output wire    ds,       // 串行数据
         output wire    shcp,     // 移位时钟
         output wire    stcp      // 锁存时钟
@@ -28,8 +28,8 @@ module music_gen(
         wire [7:0] list_index;
         wire [15:0] notes_index; // Index of main ROM (Order of note sequence), output of get_pitch.
         
-    assign list_index = {4'b0, list_index_n};
-    wire reset; assign reset=~reset_n;
+    assign list_index = {4'b0, list_index_i};
+    wire reset, back15s, forw15s; assign reset=~reset_n, back15s=~back15s_n, forw15s=~forw15s_n;
     
     // 50MHz, A4=440Hz. The precisions below can be more fine.
     parameter
@@ -57,9 +57,9 @@ module music_gen(
 		.notes_index(notes_index),
 		.note_length(note_length),
 		.abs_note_length(abs_note_length), .done_abs_note_length(done_abs_note_length), .abs_fullnote_length(abs_fullnote_length),
-		.reset_n(reset_n),
-		.back15s_n(back15s),
-		.forw15s_n(forw15s)
+		.reset(reset),
+		.back15s(back15s),
+		.forw15s(forw15s)
 	);
 	music_rom music_rom(
 		.clka(clk), // input wire clka

@@ -6,7 +6,7 @@ Index of music_rom or related: 16b; Its output: 16b+4b+4b=24b;
 Index of music_list_rom or related: 8b; Its output: 16b*2=32b;
 */
 module get_pitch(
-    input clk, input reset_n,
+    input clk, input reset,
     
     input [7:0] list_index,
     output reg signed [15:0] notes_index, //获取音符rom的地址编号
@@ -15,10 +15,8 @@ module get_pitch(
     output reg [31:0] abs_note_length, done_abs_note_length,
     output wire [31:0] abs_fullnote_length,
     
-    input back15s_n, input forw15s_n
+    input back15s, input forw15s
     );
-    wire reset; assign reset = ~reset_n, back15s=~back15s_n, forw15s=~forw15s_n;
-    
     reg [63:0] timestamp = 0, prev_timestamp = 0, last_pressed = 0; // prev_timestamp records when the last note ends. Used in note switching. 
     // So, in paused state, the user can press back/forw at most once.
     
