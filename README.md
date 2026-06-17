@@ -36,11 +36,11 @@
 	<figcaption>图2(b) 初始化</figcaption>
 </figure>
 <figure>
-	<video controls src="README_assets/VID_20260617_160111.mp4">Failed to load the video.</video>
+	<video controls src="README_assets/Compatibility.d/VID_20260617_160111.mp4">Failed to load the video.</video>
 	<figcaption>视频1 《天空之城》</figcaption>
 </figure>
 <figure>
-	<video controls src="README_assets/VID_20260617_160303.mp4">Failed to load the video.</video>
+	<video controls src="README_assets/Compatibility.d/VID_20260617_160303.mp4">Failed to load the video.</video>
 	<figcaption>视频2 《为世界之光》</figcaption>
 </figure>
 <figure>
